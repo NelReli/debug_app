@@ -13,7 +13,7 @@ try {
     $stmt = $pdo->query("SELECT * FROM produits");
 
     // recuperation des produits depuis la base de données
-$produit = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $produitsReindexés = [];
 foreach ($produits as $produit) {
     $produitsReindexés[$produit['id']] = $produit;

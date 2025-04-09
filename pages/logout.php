@@ -8,8 +8,8 @@ if (isset($_COOKIE[session_name()])) {
 }
 
 // Destruction de la session
-session_destroy();
+
 
 // Redirection vers la page d'accueil
-header('Location: index.php');
+header('Location: inde.php');
 exit();
