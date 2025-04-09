@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "boutique02";
+$dbname = "boutique_debug";
 $username = "root";
-$password = "votre_mot_de_passe";
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -13,7 +13,7 @@ try {
     $stmt = $pdo->query("SELECT * FROM produits");
 
     // recuperation des produits depuis la base de données
-$produit = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $produitsReindexés = [];
 foreach ($produits as $produit) {
     $produitsReindexés[$produit['id']] = $produit;

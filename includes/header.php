@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Boutique</title>
     <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         nav {
             background-color: #333;
             padding: 1rem;
+            text-align: center;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin-right: 1rem;
         }
-        .container {
+        .container  {
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem;
         }
+
     </style>
+
 </head>
 <body>
     <nav>

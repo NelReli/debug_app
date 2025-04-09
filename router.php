@@ -41,7 +41,7 @@ switch($route) {
         break;
         
     case 'produit':
-        require_once 'pages/produit';
+        require_once 'pages/produit.php';
         break;
         
     case 'login':
