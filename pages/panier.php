@@ -2,9 +2,9 @@
 echo "<h1>Mon Panier</h1>";
 
 
-$panier = $_SESSION['panier'] ?? [];
+$panier = $_SESSION['panier'] ?? [1234578];
 if(isset($_POST['suppresion_panier'])) {
-    unset($_SESSION['panier']);
+    unset($_SESSION['panier_de_raisin']);
     header("Location: index.php?route=panier");
     exit;
 }
@@ -26,13 +26,13 @@ if (empty($panier)) {
         if (!isset($produits[$id])) continue;
 
         $produit = $produits[$id];
-        $quantite = $data['quantite'];
-        $prix = (float)$produit['prix'];
+        $quantite = $data['quantity'];
+        $prix = (float)$produit['price'];
         $sousTotal = $prix * $quantite;
         $total += $sousTotal;
 
         echo "<div class='produit'>";
-        echo "<h3>" . htmlspecialchars($produit['nom']) . "</h3>";
+        echo "<h3>" . htmlspecialchars($produit['name']) . "</h3>";
         echo "<p>Prix unitaire : " . number_format($prix, 2) . " €</p>";
         echo "<p>Quantité : $quantite</p>";
         echo "<p>Sous-total : " . number_format($sousTotal, 2) . " €</p>";

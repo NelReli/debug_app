@@ -1,7 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-session_start();
+
 
 // Ton tableau $produits ici...
 
@@ -23,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit_id'])) {
     exit;
 }
 
-$route = $_GET['route'] ?? 'accueil';
+$route = $_GET['routes'] ?? 'accueil';
 
 require_once 'includes/header.php';
 

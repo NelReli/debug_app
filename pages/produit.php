@@ -3,6 +3,7 @@ require_once 'config/database.php';
 
 // Récupération des produits depuis la base de données
 
+var_dump($produits);
 
 
 echo "<h1>Nos Produits</h1>";
@@ -18,4 +19,4 @@ foreach ($produits as $produit) {
     echo "</form>";
     echo "</div>";
 }
-?>
+?>  
