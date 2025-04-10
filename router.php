@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit_id'])) {
     exit;
 }
 
-$route = $_GET['routes'] ?? 'accueil';
+$route = $_GET['route'] ?? 'accueil';
 
 require_once 'includes/header.php';
 
